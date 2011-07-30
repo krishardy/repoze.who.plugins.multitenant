@@ -309,6 +309,7 @@ class SqlGroupsAdapter(_BaseSqlAdapter):
         super(SqlGroupsAdapter, self).__init__(parent_class=group_class,
                                                children_class=user_class,
                                                dbsession=dbsession)
+        # TODO This needs to be updated to support company_name
         self.translations = {
             'section_name': 'group_name',
             'sections': 'groups',

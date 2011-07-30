@@ -4,29 +4,21 @@ Created on Apr 8, 2011
 @author: kris
 '''
 import logging
-from leanlog_server.model import Session, User, AclGroup, AclPermission, Company
+from example_app.model import Session, User, AclGroup, AclPermission, Company
 from repoze.who.interfaces import IIdentifier, IChallenger
-#from repose.who.plugins.auth_tkt import make_plugin
-#from repoze.who.plugins.cookie import InsecureCookiePlugin
-#from repoze.who.plugins.form import FormPlugin
 from sqlalchemy.orm.exc import MultipleResultsFound
 from repoze.who.plugins.multicompany import auth_tkt
 from repoze.who.plugins.multicompany import form
 from repoze.who.plugins.multicompany import sa_user_company, sa_userid
 from repoze.what.plugins.multicompany import adapters
-
 from repoze.what.middleware import setup_auth
-
-
-# from repoze.what.plugins.quickstart import setup_sql_auth
-# from leanlog_server.lib.auth.plugins import SAUserCompanyAuthenticatorPlugin, \
-#        UserCompanyFormPlugin, SAUserCompanyMDPlugin
 
 log = logging.getLogger(__name__)
 
+
 def add_auth(app, config):
     """
-    Add authentication and authorization middleware to the ``app``.
+    Wrap authentication and authorization middleware around the ``app``.
 
     We're going to define post-login and post-logout pages
     to do some cool things.
@@ -44,7 +36,7 @@ def add_auth(app, config):
     form_plugin = form.make_plugin(
             config.get('repoze.who.login_form_qs'),
             rememberer_name='auth_tkt',
-            formcallable='leanlog_server.lib.auth.auth:display_login_form'
+            formcallable='example_app.lib.auth.auth:display_login_form'
             )
 
     form.classifications = {
@@ -60,8 +52,9 @@ def add_auth(app, config):
             include_ip=config.get('repoze.who.cookie.include_ip'),
             timeout=config.get('repoze.who.cookie.timeout'),
             reissue_time=config.get('repoze.who.cookie.reissue_time'),
-            userid_checker='leanlog_server.lib.auth.auth:userid_checker'
+            userid_checker='example_app.lib.auth.auth:userid_checker'
             )
+    
 
     sa_user_company_auth_plugin = sa_user_company.make_plugin(User, Company,
             Session)
@@ -135,7 +128,7 @@ def display_login_form(environ):
     """
     Render the login form
     """
-    from leanlog_server.lib.base import render
+    from example_app.lib.base import render
     from pylons import tmpl_context as c
     c.dto = {'errors': {},
             'data': {},
@@ -148,8 +141,4 @@ def display_login_form(environ):
             if 'came_from' in querystring_dict \
             else environ['PATH_INFO']
     return render('/derived/users/login.mako')
-
-
-
-
 

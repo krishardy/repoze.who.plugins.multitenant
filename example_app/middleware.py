@@ -1,4 +1,4 @@
-## lib/middleware.py
+## middleware.py
 from repoze.what.predicates import not_anonymous
 
 class RepozeMiddleware(object):

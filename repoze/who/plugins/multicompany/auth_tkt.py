@@ -21,7 +21,6 @@ def _now():  # pragma NO COVERAGE
 
 
 class AuthTktCookiePlugin(object):
-
     implements(IIdentifier)
 
     userid_type_decoders = {

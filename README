@@ -1,0 +1,24 @@
+REPOZE.WHO ARCHITECTURE
+
+(For more information, see http://docs.repoze.org/who/1.0)
+
+Classifiers - Determines what type of request is being sent, and how to classify the request so that identifiers can handle it.
+Examples: brower, xmlrpc, oauth
+
+
+Identifiers - Defines how to identify a user from the submitted credentials.
+Examples: auth_tkt (cookie), form, oauth
+
+
+Challenger - Defines how to display a challenge to the user, requiring them to authenticate themselves.
+Examples: browser, xmlrpc, oauth, etc.
+
+
+Metadata - Supplements the identity with additional data
+Examples: Email address, first name, last name, groups, roles, permissions, etc.
+
+
+REPOZE.WHAT (v 1.0) is just a metadata provider.
+
+Protectors:
+These are functions that assert that the user meets the necessary criteria (predicates) to be served the request.  If the criteria is not met, a 401 response is returned by the app, and is handled by the repoze.who challenger.
