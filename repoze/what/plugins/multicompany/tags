@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BaseSourceAdapter	adapters.py	/^from repoze.what.adapters import BaseSourceAdapter, SourceError$/;"	i
+InvalidRequestError	adapters.py	/^    from sqlalchemy.exc import SQLAlchemyError, InvalidRequestError$/;"	i
+InvalidRequestError	adapters.py	/^    from sqlalchemy.exceptions import SQLAlchemyError, InvalidRequestError$/;"	i
+NoResultFound	adapters.py	/^from sqlalchemy.orm.exc import NoResultFound$/;"	i
+SQLAlchemyError	adapters.py	/^    from sqlalchemy.exc import SQLAlchemyError, InvalidRequestError$/;"	i
+SQLAlchemyError	adapters.py	/^    from sqlalchemy.exceptions import SQLAlchemyError, InvalidRequestError$/;"	i
+SourceError	adapters.py	/^from repoze.what.adapters import BaseSourceAdapter, SourceError$/;"	i
+SqlGroupsAdapter	__init__.py	/^                                             configure_sql_adapters$/;"	i
+SqlGroupsAdapter	adapters.py	/^class SqlGroupsAdapter(_BaseSqlAdapter):$/;"	c
+SqlPermissionsAdapter	__init__.py	/^                                             configure_sql_adapters$/;"	i
+SqlPermissionsAdapter	adapters.py	/^class SqlPermissionsAdapter(_BaseSqlAdapter):$/;"	c
+_BaseSqlAdapter	adapters.py	/^class _BaseSqlAdapter(BaseSourceAdapter):$/;"	c
+__all__	__init__.py	/^__all__ = ['SqlGroupsAdapter', 'SqlPermissionsAdapter',$/;"	v
+__all__	adapters.py	/^__all__ = ['SqlGroupsAdapter', 'SqlPermissionsAdapter',$/;"	v
+__init__	adapters.py	/^    def __init__(self, group_class, user_class, dbsession):$/;"	m	class:SqlGroupsAdapter
+__init__	adapters.py	/^    def __init__(self, parent_class, children_class, dbsession):$/;"	m	class:_BaseSqlAdapter
+__init__	adapters.py	/^    def __init__(self, permission_class, group_class, dbsession):$/;"	m	class:SqlPermissionsAdapter
+_create_section	adapters.py	/^    def _create_section(self, section):$/;"	m	class:_BaseSqlAdapter
+_delete_section	adapters.py	/^    def _delete_section(self, section):$/;"	m	class:_BaseSqlAdapter
+_edit_section	adapters.py	/^    def _edit_section(self, section, new_section):$/;"	m	class:_BaseSqlAdapter
+_exclude_items	adapters.py	/^    def _exclude_items(self, section, items):$/;"	m	class:_BaseSqlAdapter
+_find_sections	adapters.py	/^    def _find_sections(self, credentials):$/;"	m	class:SqlGroupsAdapter
+_find_sections	adapters.py	/^    def _find_sections(self, group_name):$/;"	m	class:SqlPermissionsAdapter
+_get_all_sections	adapters.py	/^    def _get_all_sections(self):$/;"	m	class:_BaseSqlAdapter
+_get_item_as_row	adapters.py	/^    def _get_item_as_row(self, item_name):$/;"	m	class:_BaseSqlAdapter
+_get_items_as_rowset	adapters.py	/^    def _get_items_as_rowset(self, section_name):$/;"	m	class:_BaseSqlAdapter
+_get_section_as_row	adapters.py	/^    def _get_section_as_row(self, section_name):$/;"	m	class:_BaseSqlAdapter
+_get_section_items	adapters.py	/^    def _get_section_items(self, section):$/;"	m	class:_BaseSqlAdapter
+_include_items	adapters.py	/^    def _include_items(self, section, items):$/;"	m	class:_BaseSqlAdapter
+_item_is_included	adapters.py	/^    def _item_is_included(self, section, item):$/;"	m	class:_BaseSqlAdapter
+_section_exists	adapters.py	/^    def _section_exists(self, section):$/;"	m	class:_BaseSqlAdapter
+configure_sql_adapters	__init__.py	/^                                             configure_sql_adapters$/;"	i
+configure_sql_adapters	adapters.py	/^def configure_sql_adapters(user_class, group_class, permission_class, session,$/;"	f
+eagerload	adapters.py	/^from sqlalchemy.orm import eagerload$/;"	i
