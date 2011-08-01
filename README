@@ -1,8 +1,8 @@
 REPOZE.WHO ARCHITECTURE
 
-For a quick overview, see the presentation in doc/pyohio_2011.odp from a lightning talk I gave at PyOhio on 7/30/2011.
+For a quick overview, see the presentation in doc/_static/pyohio_2011.odp from a lightning talk I gave at PyOhio on 7/30/2011.
 
-(For more information, see http://docs.repoze.org/who/1.0)
+(For more information about repoze.who, see http://docs.repoze.org/who/1.0)
 
 Classifiers - Determines what type of request is being sent, and how to classify the request so that identifiers can handle it.
 Examples: brower, xmlrpc, oauth
