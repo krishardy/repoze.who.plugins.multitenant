@@ -7,10 +7,10 @@ import logging
 from example_app.model import Session, User, AclGroup, AclPermission, Company
 from repoze.who.interfaces import IIdentifier, IChallenger
 from sqlalchemy.orm.exc import MultipleResultsFound
-from repoze.who.plugins.multicompany import auth_tkt
-from repoze.who.plugins.multicompany import form
-from repoze.who.plugins.multicompany import sa_user_company, sa_userid
-from repoze.what.plugins.multicompany import adapters
+from repoze.who.plugins.multitenant import auth_tkt
+from repoze.who.plugins.multitenant import form
+from repoze.who.plugins.multitenant import sa_user_company, sa_userid
+from repoze.what.plugins.multitenant import adapters
 from repoze.what.middleware import setup_auth
 
 log = logging.getLogger(__name__)

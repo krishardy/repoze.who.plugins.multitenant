@@ -3,16 +3,21 @@ import sys, os
 
 version = '0.1'
 
-setup(name='repoze.who.plugins.multicompany',
+setup(name='repoze.who.plugins.multitenant',
       version=version,
-      description="A repoze.who/repoze.what plugin that supports user name + company name as a composite user identifer",
+      description="A repoze.who/repoze.what plugin that supports user name + company name as a composite user identifer for multitenant applications",
       long_description="""\
-repoze.who.multicompany is...
+repoze.who.plugins.multitenant is...
 
     * A plugin for repoze.who and repoze.what 1.x that
       allows the developer to build groupings of users
       within a "company".  The users are authenticated
       by the company name, user name and password.
+
+    * This is primarily used in multitenant applications,
+      where multiple companies will use the same
+      application instance.  This is common in distributed
+      business applications such as SalesForce.com.
 """,
       classifiers=[
         'Development Status :: 2 - Pre-Alpha',

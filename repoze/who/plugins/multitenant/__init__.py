@@ -13,7 +13,7 @@
 #
 ##############################################################################
 
-"""Special namespace for repoze.who.plugins.multicompany plugins."""
+"""Special namespace for repoze.who.plugins.multitenant plugins."""
 
 # See http://peak.telecommunity.com/DevCenter/setuptools#namespace-packages
 try:
