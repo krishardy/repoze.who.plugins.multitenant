@@ -440,7 +440,7 @@ def configure_sql_adapters(user_class, group_class, permission_class, session,
     
     :param user_class: The class that manages the users.
     :param group_class: The class that manages the groups.
-    :param user_class: The class that manages the permissions.
+    :param permission_class: The class that manages the permissions.
     :param dbsession: The SQLALchemy/Elixir session to be used.
     :param group_translations: The dictionary of translations for the group.
     :param permission_translations: The dictionary of translations for the permissions.

@@ -41,6 +41,7 @@ repoze.who.plugins.multitenant is...
           # -*- Extra requirements: -*-
         'repoze.who',
         'repoze.what',
+        'sqlalchemy>=0.7'
       ],
       entry_points="""
       # -*- Entry points: -*-
